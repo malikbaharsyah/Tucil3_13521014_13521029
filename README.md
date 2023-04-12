@@ -23,13 +23,11 @@
 ## Local Setup
 <br>
 1. Clone this repo using the command below:
-
 ```
 git clone https://github.com/malikbaharsyah/Tucil3_13521014_13521029.git
 ```
 <br>
 2. Install the required libraries
-
 ```
 pip install matplotlib networkx tkinter customtkinter
 ```
@@ -38,4 +36,4 @@ pip install matplotlib networkx tkinter customtkinter
 ```
 python src/main.py
 ```
-
+<br>
