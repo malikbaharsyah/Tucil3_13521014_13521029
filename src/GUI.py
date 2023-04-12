@@ -127,30 +127,34 @@ def main():
             plt.clf()
             cost_label.configure(text="Cost: ")
             route_label.configure(text="Route: ")
-        G = nx.Graph()
-        for i in range(len(adj_list)):
-            for neighbor, weight in adj_list[i]:
-                if weight > 0:
-                    G.add_edge(nodes[i], nodes[neighbor], weight=weight)
-        if path != None:
+
+        if path == None:
+            show_popup("No path found")
+        else:
+            G = nx.Graph()
+            for i in range(len(adj_list)):
+                for neighbor, weight in adj_list[i]:
+                    if weight > 0:
+                        G.add_edge(nodes[i], nodes[neighbor], weight=weight)
+
             node_colors = ['red' if i in path else 'blue' for node in G.nodes()]
             edge_colors = ['red' if (u, v) in zip(path, path[1:]) or (v, u) in zip(path, path[1:]) else 'black' for u, v in G.edges()]
-        pos = nx.spring_layout(G)
-        if path != None:
+            pos = nx.spring_layout(G)
+
             nx.draw_networkx(G, pos, node_color=node_colors, edge_color=edge_colors, with_labels=True)
-        else:
+
             nx.draw_networkx(G, pos, with_labels=True)
-        labels = nx.get_edge_attributes(G, 'weight')
-        nx.draw_networkx_edge_labels(G, pos, edge_labels=labels)
+            labels = nx.get_edge_attributes(G, 'weight')
+            nx.draw_networkx_edge_labels(G, pos, edge_labels=labels)
 
-        # show the plot on the canvas
-        fig = plt.gcf()
-        plot = FigureCanvasTkAgg(fig, master=canvas)
-        plot.draw()
-        plot.get_tk_widget().pack(side=tk.TOP, fill=tk.BOTH, expand=1)
+            # show the plot on the canvas
+            fig = plt.gcf()
+            plot = FigureCanvasTkAgg(fig, master=canvas)
+            plot.draw()
+            plot.get_tk_widget().pack(side=tk.TOP, fill=tk.BOTH, expand=1)
 
-        # add cost label
-        if cost != None:
+            # add cost label
+
             cost_label.configure(text="Cost: "+str(cost))
             route_label.configure(text="Route: "+ " -> ".join(path))
         
