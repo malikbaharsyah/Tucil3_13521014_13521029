@@ -6,7 +6,9 @@ import networkx as nx
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from matplotlib.figure import Figure
 import matplotlib.pyplot as plt
-from Algorithms import ucs, util, astar
+import Algorithms.ucs as ucs
+import Algorithms.astar as astar
+import Algorithms.util as util
 
 
 ctk.set_appearance_mode("System")  # Modes: system (default), light, dark
@@ -107,15 +109,17 @@ def main():
         elif finishing_node == "":
             show_popup("Please select a finishing node")
         else:
+            nodes_list = [item.strip('\'\'') for item in nodes.strip('()').split(', ')]
+            adj_list = string_to_adj_matrix(adj_matrix)
             if algorithm == "UCS":
-                nodes_list = [item.strip('\'\'') for item in nodes.strip('()').split(', ')]
-                adj_list = string_to_adj_matrix(adj_matrix)
                 result = ucs.ucs(adj_list, nodes_list.index(starting_node), nodes_list.index(finishing_node), nodes_list)
-                add_graph(adj_list, result[1], nodes_list, result[0])
+            else:
+                result = astar.astar(adj_list, nodes_list.index(starting_node), nodes_list.index(finishing_node), nodes_list, astar.heuristic)
+            add_graph(adj_list, result[1], nodes_list, result[0])
+            
     
     # use networkx to draw graph in a frame
     def add_graph(adj_list, path, nodes, cost):
-        
         global plot
         if plot:
             plot.get_tk_widget().destroy()
@@ -124,7 +128,8 @@ def main():
         G = nx.Graph()
         for i in range(len(adj_list)):
             for neighbor, weight in adj_list[i]:
-                G.add_edge(nodes[i], nodes[neighbor], weight=weight)
+                if weight > 0:
+                    G.add_edge(nodes[i], nodes[neighbor], weight=weight)
 
         node_colors = ['red' if i in path else 'blue' for node in G.nodes()]
         edge_colors = ['red' if (u, v) in zip(path, path[1:]) or (v, u) in zip(path, path[1:]) else 'black' for u, v in G.edges()]
@@ -140,10 +145,9 @@ def main():
         plot.get_tk_widget().pack(side=tk.TOP, fill=tk.BOTH, expand=1)
 
         # add cost label
-        cost_label.configure(text="Cost: "+str(cost))
-
-        # add route label
-        route_label.configure(text="Route: "+str(path))
+        if cost != None:
+            cost_label.configure(text="Cost: "+str(cost))
+            route_label.configure(text="Route: "+ " -> ".join(path))
         
 
     main_window.mainloop()
