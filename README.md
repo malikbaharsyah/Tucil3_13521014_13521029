@@ -21,7 +21,7 @@
 - CustomTkinter Python Library (GUI)
 
 ## Local Setup
-<br>
+
 1. Clone this repo using the command below:
 
 ```
