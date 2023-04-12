@@ -49,7 +49,7 @@ def show_graph(adj_list, path):
 
 
 # Main program
-file_name = "graph.txt"
+file_name = "jatinewyork.txt"
 nodes, adj_list = read_graph(file_name)
 
 print("Nodes:", nodes)
@@ -75,7 +75,7 @@ goal_index = nodes.index(goal)
 cost, path = ucs(adj_list, start_index, goal_index)
 if path:
     print("Shortest path from", start, "to", goal, ":", path)
-    print("Total cost:", cost)
+    print("Total cost:", cost, "m")
 else:
     print("There is no path from", start, "to", goal)
 

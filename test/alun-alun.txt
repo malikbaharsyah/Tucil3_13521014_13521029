@@ -1,0 +1,11 @@
+9
+Norsefiicden,Pertigaan Masjid Raya Bandung,Asia Africa Monument,Pertigaan braga walk,Simpang Braga,Pertigaan Bank BTPN,Jl. Pangarang,Persimpangan Alun-Alun Bandung,Halte Trans Metro Pasundan 
+0, 261.41, 0, 0, 0, 0, 0, 0, 134.67
+261.41, 0, 138.37, 0, 0, 0, 0, 0, 0
+0, 138.37, 0, 232.14, 0, 0, 0, 135.70, 0
+0, 0, 232.14, 0, 190.92, 0, 0, 0, 0
+0, 0, 0 , 190.92, 0, 106.23, 0, 0, 0
+0, 0, 0, 0, 106.23, 0, 0, 0, 0
+0, 0, 0, 151.10, 0, 0, 0, 255.26, 0
+0, 0, 135.70, 0, 0, 0, 0, 0, 382.18
+136.89, 0, 0, 0, 0, 0, 0, 382.18, 0

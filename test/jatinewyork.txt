@@ -1,0 +1,11 @@
+9
+Puteran ITB,Gerbang ITB,Gerbang Belakang Unpad,Pertigaan Puteran Unpad,Pertigaan Sayang,Gerbang Puri,Kos Uqi,Pertigaan Caringin,Kos Malik
+0, 148.76, 0, 0, 0, 0, 0, 102.02, 0
+148.76, 0, 905.05, 0, 0, 0, 0, 0, 0
+0, 905.05, 0, 121.53, 0, 0, 0, 0, 0
+0, 0, 121.53, 0, 0, 0, 0, 0, 0
+0, 0, 0, 351.51, 0, 1050.00, 0, 558.82, 0
+0, 0, 0, 0, 1050.00, 0, 0, 0, 0
+0, 0, 0, 0, 0, 483.90, 0, 0, 0
+102.02, 0, 0, 0, 558.82, 0, 0, 0, 313.11
+0, 0, 0, 0, 0, 0, 0, 313.11, 0

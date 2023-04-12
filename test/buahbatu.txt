@@ -1,0 +1,10 @@
+8
+Telkom University Landmark Tower,Roundabout Telkom University,Pertigaan Jl. Raya Bojongsoang,Transmart Buah Batu,Simpang 3 bojongsoang,Pertigaan Borma Bojongsoang,Rumah Sakit Bina Sehat,Pertigaan Masjid Al-Mu'min
+0, 712.42, 0, 0, 0, 0, 0, 0
+712.42, 0, 237.22, 0, 0, 0, 0, 0
+0, 237.22, 0, 736.69, 1110.00, 0, 0, 0
+0, 0, 736.69, 0, 0, 0, 0, 0
+0, 0, 1110.00, 0, 0, 344.92, 1040.00, 0
+0, 0, 0, 0, 344.92, 0, 0, 380.55
+0, 0, 0, 0, 1040.00, 0, 0, 0
+0, 0, 0, 0, 0, 380.55, 0, 0

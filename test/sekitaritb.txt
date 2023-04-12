@@ -1,5 +1,5 @@
 8
-A,B,C,D,E,F,G,H
+Jl.Taman Sari,Depan Kubus,Pertigaan Salman,Pertigaan Jl.Dago,Bebek Stallone,Jl.Gelap Nyawang,Fotocopy Ciungwanara,Persimpangan Plesiran
 0, 230.19, 0, 0, 133.46, 0, 0, 0
 230.19, 0, 172.86, 0, 0, 171.27, 0, 0
 0, 172.86, 0, 106.83, 0, 0, 132.37, 0
