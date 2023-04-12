@@ -168,7 +168,3 @@ def string_to_adj_matrix(adj_matrix_string):
     adj_matrix = ast.literal_eval(adj_matrix_string)
     adj_list = [list(t) for t in adj_matrix]
     return adj_list
-
-
-# Run the starting menu
-main()
