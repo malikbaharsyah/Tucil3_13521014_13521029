@@ -1,0 +1,5 @@
+3
+Jl.Taman Sari,Depan Kubus,Pertigaan Jl.Dago
+0, 230.19, -486.79
+230.19, 0, -272.24
+-486.79, -272.24, 0
